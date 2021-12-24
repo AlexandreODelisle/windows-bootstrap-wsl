@@ -45,7 +45,7 @@ ForEach ($wantedPackage in $chocoPackages) {
 ForEach ($installedPackage in $localPackages) {
     if ($chocoPackages -NotContains $installedPackage){
         Write-Output "Need to REMOVE $wantedPackage"     
-        choco uninstall $installedPackage --yes --confirm --limitoutput
+        #choco uninstall $installedPackage --yes --confirm --limitoutput
         } 
     }
 
