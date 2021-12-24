@@ -27,8 +27,8 @@ $chocoPackages = @(
     "onedrive",
     "rufus",
     "amd-ryzen-chipset", # Hardware Specific
-    "nvidia-display-driver", # Hardware Specific
-    "samsung-magician" # Hardware Specific
+    "nvidia-display-driver" # Hardware Specific
+    #"samsung-magician" # Hardware Specific
 )
 $localPackages = choco list --localonly --idonly --limitoutput
 $localPackages = $localPackages.split(" ")
