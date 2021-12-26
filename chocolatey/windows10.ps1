@@ -25,7 +25,7 @@ $chocoPackages = @(
     "postman",
     "microsoft-windows-terminal",
     #"onedrive",
-    "rufus",
+    "rufus"
     #"amd-ryzen-chipset", # Hardware Specific
     #"nvidia-display-driver" # Hardware Specific
     #"samsung-magician" # Hardware Specific
