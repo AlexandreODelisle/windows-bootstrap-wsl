@@ -9,25 +9,25 @@ if (Get-Command choco.exe -ErrorAction SilentlyContinue) {
 chocolatey feature enable -n allowGlobalConfirmation
 refreshenv
 $chocoPackages = @(
-    "chocolatey",
-    "chocolatey-core.extension",
-    "DotNet4.5.2",
+    #"chocolatey",
+    #"chocolatey-core.extension",
+    #"DotNet4.5.2",
     "git.install",
     "git-credential-manager-for-windows",
     "notepadplusplus.install",
     "vscode",
-    "vscode.install",
+    #"vscode.install",
     "GoogleChrome"
     "drawio",
-    "gimp",
-    "keepass.install",
+    #"gimp",
+    #"keepass.install",
     #"virtualbox",
     "postman",
     "microsoft-windows-terminal",
-    "onedrive",
+    #"onedrive",
     "rufus",
-    "amd-ryzen-chipset", # Hardware Specific
-    "nvidia-display-driver" # Hardware Specific
+    #"amd-ryzen-chipset", # Hardware Specific
+    #"nvidia-display-driver" # Hardware Specific
     #"samsung-magician" # Hardware Specific
 )
 $localPackages = choco list --localonly --idonly --limitoutput
