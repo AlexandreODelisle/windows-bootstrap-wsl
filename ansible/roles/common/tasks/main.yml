@@ -1,0 +1,24 @@
+
+- name: ADD APT GPGs
+  apt_key:
+    url: "{{ item }}"
+    state: present
+  become: yes
+  with_items: "{{ apt.gpg }}"
+- name: ADD APT REPOSITORIES
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  with_items: "{{ apt.repositories }}"
+- name: UPDATE AND UPGRADE APT PACKAGES
+  become: yes
+  apt:
+    upgrade: yes
+    update_cache: yes
+    cache_valid_time: 86400
+- name: INSTALL APT PACKAGES
+  become: yes
+  apt:
+    pkg: "{{ apt.packages }}"
+    state: latest
+    update_cache: yes

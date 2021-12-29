@@ -1,0 +1,11 @@
+apt:
+  gpg:
+    - https://apt.releases.hashicorp.com/gpg
+  repositories: 
+    - "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_distribution_release | lower }} main"
+    - "ppa:deadsnakes/ppa"
+  packages: 
+    - vault
+    - python3.7
+    - python3.8
+    - python3.9
