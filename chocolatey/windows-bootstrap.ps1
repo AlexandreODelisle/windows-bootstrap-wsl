@@ -21,7 +21,7 @@ $chocoPackages = @(
     "drawio",
     #"gimp",
     #"keepass.install",
-    #"virtualbox",
+    "virtualbox",
     "postman",
     "microsoft-windows-terminal",
     #"onedrive",
