@@ -6,6 +6,7 @@
   become: yes
   with_items: "{{ apt.gpg }}"
 - name: ADD APT REPOSITORIES
+  become: yes
   apt_repository:
     repo: "{{ item }}"
     state: present
@@ -22,3 +23,7 @@
     pkg: "{{ apt.packages }}"
     state: latest
     update_cache: yes
+- name: Creates directory for VS Code Extensions
+  file:
+    path: ~/.vscode/extensions
+    state: directory

@@ -1,10 +1,15 @@
 apt:
   gpg:
     - https://apt.releases.hashicorp.com/gpg
+    - http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x93C4A3FD7BB9C367
   repositories: 
     - "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_distribution_release | lower }} main"
     - "ppa:deadsnakes/ppa"
+    - "deb http://ppa.launchpad.net/ansible/ansible/ubuntu {{ ansible_distribution_release | lower }} main"
   packages: 
+    - ansible
+    - ansible-lint
+    - pass
     - vault
     - python3.7
     - python3.8

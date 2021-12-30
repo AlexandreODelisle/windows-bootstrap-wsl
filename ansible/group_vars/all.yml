@@ -3,6 +3,18 @@ oh_my_zsh_theme: robbyrussell
 
 # Default plugins
 oh_my_zsh_plugins:
+  - zsh_reload
+  - history
+  - jsontools
+  - ubuntu
+  - kubectl
   - git
+  - autoupdate-oh-my-zsh-plugins
+  - exa-ls
 users:
   - username: adelisle
+    visual_studio_code_extensions:
+     - tomaciazek.ansible
+     - davidanson.vscode-markdownlint
+     - donjayamanne.python-extension-pack
+     - hashicorp.terraform

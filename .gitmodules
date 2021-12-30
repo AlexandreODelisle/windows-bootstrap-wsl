@@ -1,6 +1,6 @@
-[submodule "ansible/oh-my-zsh"]
-	path = ansible/oh-my-zsh
-	url = https://github.com/gantsign/ansible-role-oh-my-zsh.git
 [submodule "ansible/roles/oh-my-zsh"]
 	path = ansible/roles/oh-my-zsh
 	url = https://github.com/gantsign/ansible-role-oh-my-zsh.git
+[submodule "ansible/roles/vscode-extensions"]
+	path = ansible/roles/vscode-extensions
+	url = https://github.com/gantsign/ansible-role-visual-studio-code-extensions.git
