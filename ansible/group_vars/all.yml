@@ -3,14 +3,14 @@ oh_my_zsh_theme: robbyrussell
 
 # Default plugins
 oh_my_zsh_plugins:
-  - zsh_reload
+  - zsh-autosuggestions
   - history
   - jsontools
   - ubuntu
   - kubectl
   - git
-  - autoupdate-oh-my-zsh-plugins
-  - exa-ls
+  - safe-paste  
+  - sudo
 users:
   - username: adelisle
     visual_studio_code_extensions:
@@ -18,3 +18,4 @@ users:
      - davidanson.vscode-markdownlint
      - donjayamanne.python-extension-pack
      - hashicorp.terraform
+     - ms-azuretools.vscode-docker
