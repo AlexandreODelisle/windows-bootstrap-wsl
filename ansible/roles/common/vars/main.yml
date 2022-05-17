@@ -12,9 +12,6 @@ apt:
     - ansible
     - ansible-lint
     - pass
-    - python3.7
-    - python3.8
-    - python3.9
     - vagrant
     - packer
     - vault
@@ -22,3 +19,23 @@ apt:
     - docker-ce 
     - docker-ce-cli 
     - containerd.io
+
+python: 
+  versions: 
+    - "3.8"
+    - "3.9"
+    - "3.10"
+
+
+snapd:
+  - code
+  - kontena-lens
+
+vscode: 
+  user: adelisle
+  extensions: 
+    - tomaciazek.ansible
+    - davidanson.vscode-markdownlint
+    - donjayamanne.python-extension-pack
+    - hashicorp.terraform
+    - ms-azuretools.vscode-docker

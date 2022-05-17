@@ -23,7 +23,41 @@
     pkg: "{{ apt.packages }}"
     state: latest
     update_cache: yes
+
+- name: Install SNAPD packages
+  become: yes
+  community.general.snap:
+    name: "{{ snapd }}"
+    classic: yes
+
+- name: Install Python Version
+  become: yes
+  with_items: "{{ python.versions }}"
+  apt:
+    pkg: "python{{ item }}"
+    state: latest
+    update_cache: yes
+
+- name: Install Python Utils
+  become: yes
+  with_items: "{{ python.versions }}"
+  apt:
+    pkg: "python{{ item }}-distutils"
+    state: latest
+    update_cache: yes
+
+
 - name: Creates directory for VS Code Extensions
   file:
-    path: ~/.vscode/extensions
+    path: /home/{{ vscode.user }}/.vscode/extensions
     state: directory
+
+- name: Creates directory for VS Code Extensions
+  command: code --extensions-dir /home/{{ vscode.user }}/.vscode/extensions
+  
+
+- name: Creates directory for VS Code Extensions
+  with_items: "{{ vscode.extensions }}"
+  register: vscodextout
+  command: code --install-extension {{ item }}
+  changed_when: "'already installed.' not in vscodextout.stdout"
